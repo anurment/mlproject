@@ -15,7 +15,7 @@ dependencies = [
     "seaborn",
     "matplotlib",
     "scipy",
-    "scikit-learn",
+    "scikit-learn<1.6.0",
     "catboost",
     "xgboost",
     "dill"
