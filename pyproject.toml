@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlproject"
+version = "0.0.1"
+description = "Machine learning project for practicing cloud deployment and implementation"
+authors = [{ name = "Aleksi", email = "aleksi@example.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "numpy",
+    "seaborn",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "catboost",
+    "xgboost",
+    "dill"
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[project.scripts]
+mlproject-cli = "src.main:main"
+
+[tool.setuptools]
+packages = ["src"]
